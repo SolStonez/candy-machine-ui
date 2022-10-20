@@ -1,5 +1,7 @@
 body {
-  background: #000000;
+  background: url("images/background4.png");
+  background-position: unset;
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -12,3 +14,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.inferno {
+  font-family: 'My Soul', cursive;
+  color: #ffffff;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .inferno {
+    font-size: 45px;
+  }
+}
+

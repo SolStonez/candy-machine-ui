@@ -31,15 +31,34 @@ import { MintButton } from "./MintButton";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 
+import Main from './images/main.png'
+
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   height: 60px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
   color: white;
   font-size: 16px;
   font-weight: bold;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+`;
+
+const Image = styled.img`
+  height: 300px;
+  width: auto;
+  border-radius: 7px;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 20px;
+  @media (max-width: 768px) {
+    height: 200px;
+  }
+ 
 `;
 
 const MintContainer = styled.div``; // add your owns styles here
@@ -493,10 +512,13 @@ const Home = (props: HomeProps) => {
           style={{
             padding: 24,
             paddingBottom: 10,
-            backgroundColor: "#151A1F",
+            backgroundColor: "rgba(0,0,0,0.7497373949579832)",
             borderRadius: 6,
+            border: "2px solid #fcb603"
           }}
         >
+          <h1 className='inferno'>Legion X Solanaverse</h1>
+          <Image src={Main} />
           {!wallet.connected ? (
             <ConnectButton>Connect Wallet</ConnectButton>
           ) : (
@@ -645,7 +667,23 @@ const Home = (props: HomeProps) => {
             display="block"
             style={{ marginTop: 7, color: "grey" }}
           >
-            Powered by METAPLEX
+            A Legion of Sol Launch
+          </Typography>
+          <Typography
+            variant="caption"
+            align="center"
+            display="block"
+            style={{ marginTop: 7, color: "grey" }}
+          >
+           Legion Launch 1 tokens wil be burned per mint.
+          </Typography>
+          <Typography
+            variant="caption"
+            align="center"
+            display="block"
+            style={{ marginTop: 7, color: "grey" }}
+          >
+           Price w/ LL1: 0.33 SOL. No LL1: 0.44 SOL
           </Typography>
         </Paper>
       </Container>
